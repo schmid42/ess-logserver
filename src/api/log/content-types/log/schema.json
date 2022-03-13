@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logs",
+  "info": {
+    "singularName": "log",
+    "pluralName": "logs",
+    "displayName": "Log",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "DEBUG",
+        "INFO",
+        "SUCCESS",
+        "WARNING",
+        "ERROR",
+        "CRITICAL"
+      ],
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "computername": {
+      "type": "string",
+      "required": true,
+      "maxLength": 128
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}
